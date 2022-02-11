@@ -13,3 +13,11 @@
     jalankan server : nodemon app.js
     pada browser: http://localhost:3000
 
+
+### 05. Connecting to mongoDB
+
+    install mongoDB : npm i --save mongoose
+    Documentation : https://mongoosejs.com/docs/4.x/docs/index.html  
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
