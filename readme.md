@@ -7,4 +7,9 @@
 
     install module:
     npm i --save express ejs
+    
+### 04. Server setup
+    
+    jalankan server : nodemon app.js
+    pada browser: http://localhost:3000
 

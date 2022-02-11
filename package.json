@@ -2,7 +2,7 @@
   "name": "shoopingcart",
   "version": "1.0.0",
   "description": "npm init -y     create database mongodb compass         database: cmscart         collection: pages",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
