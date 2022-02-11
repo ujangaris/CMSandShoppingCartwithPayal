@@ -21,3 +21,11 @@
 
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
+
+### 06. Templates
+
+    Documentation : https://getbootstrap.com/docs/3.3/examples/starter-template/
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000

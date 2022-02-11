@@ -15,14 +15,16 @@ db.once('open', function () {
 const app = express()
 
 // View engine setup
-app.set('view', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 // Set public folder
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', function(req, res){
-    res.send('working')
+    res.render('index',{
+        title: 'Home'
+    })
 })
 
 // Start the server
