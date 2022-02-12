@@ -121,3 +121,21 @@
     pada browser: http://localhost:3000/admin/pages
     klik button delete pada salah satu data, jika berhasil akan ada alert message, jika di klik ok
     data akan tehapus, dan ada alert danger (Page deleted!)
+
+### 18. Admin categories model and route setup
+    
+    ┌──────────────────────────────────────────────────────────────────────────────┐
+    │ pada terminal coba lakukan insert data:                                      │
+    │         mongo                                                                │
+    │         show dbs                                                             │
+    │         use cmscart                                                          │
+    │         show collections                                                     │
+    │         db.categories.insertOne({title:"food", slug:"food"})                 │
+    │                                                                              │
+    │         dan input satu lagi data:                                            │
+    │         db.categories.insertOne({title:"drink", slug:"drink"})               │
+    └──────────────────────────────────────────────────────────────────────────────┘ 
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/categories/
