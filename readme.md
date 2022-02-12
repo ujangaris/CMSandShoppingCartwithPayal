@@ -83,3 +83,11 @@
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000/admin/pages
+
+### 14. Admin pages sorting
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/pages
+    coba mengeser posisi antara about dan services (naik dan turun), 
+    jika berhasil data  pada database mongodb akan berubah untuk sortingnya(bernilai 1 atau 2)
