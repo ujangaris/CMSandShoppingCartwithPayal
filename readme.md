@@ -183,3 +183,12 @@
     pada browser: http://localhost:3000/admin/categories
     coba klik button delete pada salah satu data, jika muncul alert confirm,
     klik ok, jika berhasil maka data yang dipilih terhapus.
+
+### 24. Products model , route and packages setup
+
+    install package:
+    npm i --save express-fileupload fs-extra mkdirp resize-img
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/products

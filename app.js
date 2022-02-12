@@ -5,6 +5,7 @@ const config= require('./config/database')
 const bodyParser = require('body-parser');
 const session = require('express-session')
 const expressValidator = require('express-validator')
+const fileUpload = require('express-fileupload')
 
 
 // Connect to DB
@@ -27,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Set global errors variable
 app.locals.errors = null
+
+//Express filelUpload middleware 
+app.use(fileUpload())
 
 // Body parser middleware
 // parse application/x-www-form-urlencoded
@@ -75,10 +79,12 @@ app.use(function (req, res, next) {
 const pages = require('./routes/pages')
 const adminPages = require('./routes/admin_pages')
 const adminCategories = require('./routes/admin_categories')
+const adminProducts = require('./routes/admin_products')
 
 app.use('/', pages)
 app.use('/admin/pages', adminPages);
 app.use('/admin/categories', adminCategories);
+app.use('/admin/products', adminProducts);
 
 // Start the server
 const port = 3000
