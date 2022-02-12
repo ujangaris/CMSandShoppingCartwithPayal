@@ -115,6 +115,17 @@ router.post('/edit-category/:id', function (req, res) {
     });
   }
 });
+/*
+ * DELETE category
+ */
+router.get('/delete-category/:id', function (req, res) {
+  Category.findByIdAndRemove(req.params.id, function (err) {
+    if (err) return console.log(err);
+    req.flash('danger', 'Category Deleted!');
+    res.redirect('/admin/categories/');
+  });
+});
+
 
 // Exports
 module.exports = router;

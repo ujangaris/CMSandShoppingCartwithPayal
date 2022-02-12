@@ -175,3 +175,11 @@
     pada browser: http://localhost:3000/admin/pages
     coba klik button edit pada salah satu data, setelah masuk kehalaman edit
     lakukan edit, jika berhasil data akan berubah dan akan ada alert success.
+
+### 23. Delete category
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/categories
+    coba klik button delete pada salah satu data, jika muncul alert confirm,
+    klik ok, jika berhasil maka data yang dipilih terhapus.
