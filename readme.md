@@ -153,3 +153,11 @@
     pada browser: http://localhost:3000/admin/categories/add-category
     coba input data pada form category, jika berhasil maka data akan bertambah dan 
     akan diarahkan ke halaman http://localhost:3000/admin/categories
+
+### 21. Edit category
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/categories
+    coba klik button edit pada salah satu data, setelah masuk kehalaman edit
+    lakukan edit, jika berhasil data akan berubah dan akan ada alert success.
