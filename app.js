@@ -1,42 +1,41 @@
-const express = require('express')
-const path = require('path')
-const mongoose = require('mongoose')
-const config= require('./config/database')
+const express = require('express');
+const path = require('path');
+const mongoose = require('mongoose');
+const config = require('./config/database');
 const bodyParser = require('body-parser');
-const session = require('express-session')
-const expressValidator = require('express-validator')
-const fileUpload = require('express-fileupload')
-
+const session = require('express-session');
+const expressValidator = require('express-validator');
+const fileUpload = require('express-fileupload');
 
 // Connect to DB
-mongoose.connect(config.database)
+mongoose.connect(config.database);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
   console.log('Connect to mongoDB');
-}); 
+});
 
 // Init app
-const app = express()
+const app = express();
 
 // View engine setup
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 // Set public folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Set global errors variable
-app.locals.errors = null
+app.locals.errors = null;
 
-//Express filelUpload middleware 
-app.use(fileUpload())
+//Express filelUpload middleware
+app.use(fileUpload());
 
 // Body parser middleware
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
-app.use(bodyParser.json()) 
+app.use(bodyParser.json());
 
 // Express session middleware
 app.use(
@@ -76,18 +75,18 @@ app.use(function (req, res, next) {
 });
 
 // Set routes
-const pages = require('./routes/pages')
-const adminPages = require('./routes/admin_pages')
-const adminCategories = require('./routes/admin_categories')
-const adminProducts = require('./routes/admin_products')
+const pages = require('./routes/pages');
+const adminPages = require('./routes/admin_pages');
+const adminCategories = require('./routes/admin_categories');
+const adminProducts = require('./routes/admin_products');
 
-app.use('/', pages)
+app.use('/', pages);
 app.use('/admin/pages', adminPages);
 app.use('/admin/categories', adminCategories);
 app.use('/admin/products', adminProducts);
 
 // Start the server
-const port = 3000
+const port = 3000;
 app.listen(port, () => {
-    console.log(`App listening on port ${port}!`);
+  console.log(`App listening on port ${port}!`);
 });

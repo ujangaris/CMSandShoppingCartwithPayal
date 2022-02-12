@@ -24,6 +24,22 @@ router.get('/', function (req, res) {
     });
   });
 });
+/*
+ * GET add product
+ */
+router.get('/add-product', function (req, res) {
+  let title = '';
+  let desc = '';
+  let price = '';
+  Category.find(function (err, categories) {
+    res.render('admin/add_product', {
+      title: title,
+      desc: desc,
+      categories: categories,
+      price: price,
+    });
+  });
+});
 
 // Exports
 module.exports = router;

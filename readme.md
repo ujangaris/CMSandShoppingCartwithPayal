@@ -189,6 +189,15 @@
     install package:
     npm i --save express-fileupload fs-extra mkdirp resize-img
     
+### 25. Products index
+
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000/admin/products
+
+### 26. Get add product
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/products/add-product
+    pada form coba masukan gambar, jika gambar yang dipilih tampil berarti setup code kita berhasil
