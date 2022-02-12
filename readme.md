@@ -37,3 +37,19 @@
     pada browser: 
     page front => http://localhost:3000
     page admin => http://localhost:3000/admin/pages
+
+### 08. Getting more packages
+
+    install body-parser : npm i --save body-parser
+    Documentation : https://github.com/expressjs/body-parser
+
+    install express-session : npm i --save express-session
+    Documentation : https://github.com/expressjs/session
+
+    install express-validator : npm install express-validator@5.3.0
+
+    ┌──────────────────────────────────────────────────────────────────────────────┐
+    │     install express-messages : npm i --save express-messages                 │
+    │     install express-messages : npm i --save connect-flash                    │
+    │     Documentation : https://github.com/visionmedia/express-messages          │
+    └──────────────────────────────────────────────────────────────────────────────┘
