@@ -161,3 +161,17 @@
     pada browser: http://localhost:3000/admin/categories
     coba klik button edit pada salah satu data, setelah masuk kehalaman edit
     lakukan edit, jika berhasil data akan berubah dan akan ada alert success.
+
+### 22. Edit pages bux fix
+
+    jika kita mencoba edit page, kemudian coba mengosongkan title dan slug,
+    pada inspec element setelh submit tidak ada parameter yang sebelumnya.
+
+    caranya dengan mengganti yang semula menggunakan parameter slug menjadi id
+
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/pages
+    coba klik button edit pada salah satu data, setelah masuk kehalaman edit
+    lakukan edit, jika berhasil data akan berubah dan akan ada alert success.

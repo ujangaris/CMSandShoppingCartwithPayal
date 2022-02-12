@@ -2,7 +2,7 @@
 <h2 class="page-title">Edit a page</h2>
 <a href="/admin/pages" class="btn btn-primary">Back to all pages</a>
 <br><br>
-<form action="/admin/pages/edit-page/<%= slug %>" method="post">
+<form action="/admin/pages/edit-page/<%= id %>" method="post">
     <div class="form-group">
       <label for="">Title</label>
       <input type="text" name="title" value="<%= title %>" class="form-control" placeholder="Title" aria-describedby="helpId">
@@ -15,7 +15,6 @@
       <label for="">Content</label>
       <textarea name="content" class="form-control" id="ta" placeholder="Content" cols="30" rows="10"><%= content %></textarea>
     </div>
-    <input type="hidden" name="id" value="<%= id %>">
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
 <%- include('../_layouts/adminFooter')  %> 
