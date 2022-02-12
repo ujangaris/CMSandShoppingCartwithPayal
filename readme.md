@@ -29,3 +29,11 @@
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000
+
+### 07. Routes setup
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: 
+    page front => http://localhost:3000
+    page admin => http://localhost:3000/admin/pages
