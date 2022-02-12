@@ -201,3 +201,23 @@
     restart server : nodemon app.js
     pada browser: http://localhost:3000/admin/products/add-product
     pada form coba masukan gambar, jika gambar yang dipilih tampil berarti setup code kita berhasil
+
+### 27. Post add product
+
+    ┌──────────────────────────────────────────────────────────────────────────────┐
+    │ untuk mengatasi error 'image' not property :                                 │
+    │     if(!req.files){                                                          │
+    │     imageFile = ''                                                           │
+    │     }                                                                        │
+    │     if(req.files){                                                           │
+    │                                                                              │
+    │         var imageFile =                                                      │
+    │         typeof req.files.image !== 'undefined' ? req.files.image.name : '';  │
+    │     }                                                                        │
+    └──────────────────────────────────────────────────────────────────────────────┘ 
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/products/add-product
+    pada form coba input form 2x , pertama dengan gambar yang kedua tidak dengan gambar
+    jika berhasil data akan terimput dan yang di input tanpa gambar akan tampil gambar noimage secara otomatis
