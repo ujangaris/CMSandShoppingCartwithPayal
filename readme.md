@@ -86,6 +86,7 @@
 
 ### 14. Admin pages sorting
 
+    Documentation : https://releases.jquery.com/ui/
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000/admin/pages
@@ -100,3 +101,23 @@
     klik button edit , jika berhasil akan diarahkan kehalaman edit sesui dengan data yang pilih.
 
 ### 16. Post edit page 
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/pages
+    klik button edit pada salah satu data
+    kemudian coba lakukan edit data pada halaman form edit, jika berhasil akan ada alert message
+    dan data akan ber ubah.
+
+### 17. Wysiwig and delete page 
+
+    CKEditor 
+    Documentation : 
+    https://ckeditor.com/
+    https://cdn.ckeditor.com/
+    https://ckeditor.com/docs/ckeditor5/latest/builds/guides/predefined-builds/quick-start.html
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/pages
+    klik button delete pada salah satu data, jika berhasil akan ada alert message, jika di klik ok
+    data akan tehapus, dan ada alert danger (Page deleted!)

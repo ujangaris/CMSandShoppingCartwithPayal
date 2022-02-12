@@ -158,12 +158,22 @@ router.post('/edit-page/:slug', function (req, res) {
           page.save(function (err) {
             if (err) return console.log(err);
             req.flash('success', 'Page added!');
-            res.redirect('/admin/pages/edit-page/'+page.slug);
+            res.redirect('/admin/pages/edit-page/' + page.slug);
           });
         });
       }
     });
   }
+});
+/*
+ * DELETE page
+ */
+router.get('/delete-page/:id', function (req, res) {
+  Page.findByIdAndRemove(req.params.id, function (err) {
+    if (err) return console.log(err);
+    req.flash('danger', 'Page Deleted!');
+    res.redirect('/admin/pages/');
+  });
 });
 
 // Exports
