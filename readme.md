@@ -55,3 +55,9 @@
     └──────────────────────────────────────────────────────────────────────────────┘
 
 ### 09. creating the page model
+
+### 10. Get add page
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/pages/add-page
