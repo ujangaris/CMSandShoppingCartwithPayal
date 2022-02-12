@@ -77,3 +77,9 @@
     pada browser: http://localhost:3000/admin/pages/add-page
     kemudian coba input data 
     jika di redirect ke halaman http://localhost:3000/admin/pages, berarti setup yang kita lakukan berhasil
+
+### 13. Admin pages index
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/pages
