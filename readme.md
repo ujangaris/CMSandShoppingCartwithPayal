@@ -145,3 +145,11 @@
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000/admin/categories
+
+### 20. Add category
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/categories/add-category
+    coba input data pada form category, jika berhasil maka data akan bertambah dan 
+    akan diarahkan ke halaman http://localhost:3000/admin/categories
