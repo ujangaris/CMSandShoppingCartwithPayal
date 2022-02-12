@@ -98,3 +98,5 @@
     restart server : nodemon app.js
     pada browser: http://localhost:3000/admin/pages
     klik button edit , jika berhasil akan diarahkan kehalaman edit sesui dengan data yang pilih.
+
+### 16. Post edit page 
