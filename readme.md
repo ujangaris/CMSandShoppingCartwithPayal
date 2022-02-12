@@ -61,3 +61,11 @@
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000/admin/pages/add-page
+
+### 11. Post add page 1
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/pages/add-page
+    kemudian coba klik buttom submit tampa input data
+    jika muncul alert error berarti, setup yang kita lakukan berhasil
