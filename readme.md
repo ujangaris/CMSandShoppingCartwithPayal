@@ -337,7 +337,14 @@
     kemudian klik All product, akan diarahkan ke halaman : http://localhost:3000/products
     jika berhasil akan tampil product dari database.
 
+### 39. Display products by category
 
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000
+    kemudian klik dan pilih category yang ingin dilihat, 
+    akan diarahkan ke halaman : http://localhost:3000/products/<nama parameter category yang dipilih>
+    jika berhasil akan tampil product berdasarkan category dari database.
 
 
 
