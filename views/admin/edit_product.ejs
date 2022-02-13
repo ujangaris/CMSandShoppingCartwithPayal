@@ -84,9 +84,14 @@
     <% }); %>
 </ul>
 <br><br>
-<form action="/admiin/products/product-gallery/<%= id %>" method="post" enctype="multipart/form-data" class="dropzone" id="dropzoneForm"></form>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/basic.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/dropzone.css">
+<form action="/admin/products/product-gallery/<%= id %>" method="post" enctype="multipart/form-data" class="dropzone" id="dropzoneForm">
+    <div class="fallback">
+        <input type="file" name="file" multiple>
+        <input type="submit" value="Upload">
+    </div>
+</form>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/basic.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/dropzone.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/dropzone.js"></script>
 <script>
 
@@ -107,15 +112,15 @@
 
   // Dropzone
   Dropzone.options.dropzoneForm = {
-    acceptedFiles: "image/*",
-    init:function(){
-      this.on("queuecomplete", function(file){
-        setTimeout(function(){
-          location.reload()
-        }, 1000)
-      })
+        acceptedFiles: "image/*",
+        init: function() {
+            this.on("queuecomplete", function(file) {
+                //setTimeout(function() {
+                //location.reload()
+                //}, 1000);
+            });
+        }
     }
-  }
 
 </script>
 <%- include('../_layouts/adminFooter') %>

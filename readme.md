@@ -245,3 +245,14 @@
     kemudian coba edit data , bisa inputan atau gambar , jika berhasil data akan berubah.
 
     pada tahap ini belum menggunakan funsi dari dropzone.
+
+### 31. Upload gallery images part 1
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/products
+    coba klik button edit pada salah satu data, 
+    akan diarahkan ke halaman edit product sesui dengan data yang di klik.
+    kemudian coba klik bagian drop image, dan pilih beberapa gambar.
+    jika pada gambar terdapat tanda checklist itu tandanya gambar berhasil tersimpan .
+    untuk lebih memastikan lihat pada pbuli/product_imag/<id+namagambar yang kita pilih>/gallery/thumbs akan ada file gambar yang td kita drop

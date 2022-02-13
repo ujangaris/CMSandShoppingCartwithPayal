@@ -246,5 +246,20 @@ router.post('/edit-product/:id', function (req, res) {
 
   var errors = req.validationErrors();
 });
+/*
+ * POST product gallery
+ */
+router.post('/product-gallery/:id', function (req, res) {
+  var productImage = req.files.file;
+  var id = req.params.id;
+  var path = 'public/product_images/' + id + '/gallery/' + req.files.file.name;
+  var thumbsPath =
+    'public/product_images/' + id + '/gallery/thumbs/' + req.files.file.name;
+
+  productImage.mv(path, function (err) {
+    if (err) console.log(err);
+  });
+  res.sendStatus(200);
+});
 // Exports
 module.exports = router;
