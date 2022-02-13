@@ -346,7 +346,17 @@
     akan diarahkan ke halaman : http://localhost:3000/products/<nama parameter category yang dipilih>
     jika berhasil akan tampil product berdasarkan category dari database.
 
+### 40. Display product details
 
+    Fancybox Documentation : https://cdnjs.com/libraries/fancybox/3.1.20
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000
+    kemudian klik dan pilih category yang ingin dilihat, 
+    akan diarahkan ke halaman : http://localhost:3000/products/<nama parameter category yang dipilih>
+    coba klik pada salah satu photo gallery, jika gambarnya mengambang dan bisa digeser, 
+    berarti fancybox yang kita pasang berhasil.
 
 
 
