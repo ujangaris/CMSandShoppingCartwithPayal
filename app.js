@@ -119,14 +119,16 @@ app.use(function (req, res, next) {
 
 // Set routes
 const pages = require('./routes/pages');
+const products = require('./routes/products');
 const adminPages = require('./routes/admin_pages');
 const adminCategories = require('./routes/admin_categories');
 const adminProducts = require('./routes/admin_products');
 
-app.use('/', pages);
 app.use('/admin/pages', adminPages);
 app.use('/admin/categories', adminCategories);
 app.use('/admin/products', adminProducts);
+app.use('/products', products);
+app.use('/', pages);
 
 // Start the server
 const port = 3000;

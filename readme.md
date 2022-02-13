@@ -328,3 +328,19 @@
     pada browser: http://localhost:3000/admin/categories
     kemudian coba lakukan CRUD , untuk melihat hasil coba pada : http://localhost:3000/
     jika datanya berubah sehabis di refresh artinya setup yang kita lakukan berhasil.
+
+### 38. Display all products
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000
+    kemudian klik All product, akan diarahkan ke halaman : http://localhost:3000/products
+    jika berhasil akan tampil product dari database.
+
+
+
+
+
+
+
+
