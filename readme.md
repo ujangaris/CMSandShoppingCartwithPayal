@@ -313,3 +313,10 @@
     dan lihat perubahan pada browser: http://localhost
     jika berhasil halaman hanya perlu di refresh untuk melihat perubahan,
     tapa harus restart server.
+
+### 36. Display page content
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost
+    kemudian coba klik menu2 pada navbar, jika berhasil content akan berganti.
