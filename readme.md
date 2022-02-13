@@ -296,10 +296,20 @@
     
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
-    pada browser: http://localhost:
+    pada browser: http://localhost
 
     jika kamu coba masuk kehalaman  : http://localhost:3000/admin/pages
     coba pindahkan pisisi contoh blog pada bagian setelah home,
     maka setelah kamu restart server (nodemon app.js), 
     kamu akan liat susunan sesuai dengan yang td kita ubah,
     pada halaman http://localhost:3000/admin/pages
+
+### 35. Admin page changes not reflected in frontend fix
+
+    coba masuk kehalaman  : http://localhost:3000/admin/pages
+    kemudian lakukan CRUD, setelah melakukan perubahan create misalnya 
+    kemudian lakukan restart server
+    restart server : nodemon app.js
+    dan lihat perubahan pada browser: http://localhost
+    jika berhasil halaman hanya perlu di refresh untuk melihat perubahan,
+    tapa harus restart server.
