@@ -282,3 +282,12 @@
     untuk lebih memastikan lihat pada pbuli/product_imag/<id+namagambar yang kita pilih>/gallery/thumbs akan ada file gambar yang yang berkurang.
 
     note: gambar hanya berhasil di simpan pada local direcory, tidak pada database!
+
+### 33. Delete product
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/products
+    coba klik button delete pada salah satu data, jika berhasil gambar akan terhapus dari halaman.
+    untuk lebih memastikan lihat pada pbuli/product_imag data <id+namagambar yang kita pilih untuk dihapus>
+    sudah tidak ada.

@@ -294,5 +294,25 @@ router.get('/delete-image/:image', function (req, res) {
     }
   });
 });
+/*
+ * DELETE product
+ */
+router.get('/delete-product/:id', function (req, res) {
+  var id = req.params.id
+  var path = 'public/product_images/' + id
+
+  fs.remove(path, function(err){
+    if(err){
+      console.log(err);
+    }else{
+      Product.findByIdAndRemove(id, function(err){
+        console.log(err);
+      })
+      req.flash('success', 'Product deleted!');
+      res.redirect('/admin/products');
+    }
+  })
+});
+
 // Exports
 module.exports = router;
