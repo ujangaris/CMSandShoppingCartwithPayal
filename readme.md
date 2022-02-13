@@ -320,3 +320,11 @@
     restart server : nodemon app.js
     pada browser: http://localhost
     kemudian coba klik menu2 pada navbar, jika berhasil content akan berganti.
+
+### 37. Front display categories
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/categories
+    kemudian coba lakukan CRUD , untuk melihat hasil coba pada : http://localhost:3000/
+    jika datanya berubah sehabis di refresh artinya setup yang kita lakukan berhasil.

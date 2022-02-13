@@ -29,16 +29,28 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.locals.errors = null;
 
 // Get Page Model
-var Page = require('./models/page')
+var Page = require('./models/page');
 
 // Get all pages to pass to header.ejs
 Page.find({})
   .sort({ sorting: 1 })
   .exec(function (err, pages) {
-    if(err){
+    if (err) {
       console.log(err);
-    }else{
-      app.locals.pages = pages
+    } else {
+      app.locals.pages = pages;
+    }
+  });
+
+// Get Category Model
+var Category = require('./models/category');
+
+// Get all categories to pass to header.ejs
+Category.find(function (err, categories) {
+    if (err) {
+      console.log(err);
+    } else {
+      app.locals.categories = categories;
     }
   });
 
