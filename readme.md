@@ -291,3 +291,15 @@
     coba klik button delete pada salah satu data, jika berhasil gambar akan terhapus dari halaman.
     untuk lebih memastikan lihat pada pbuli/product_imag data <id+namagambar yang kita pilih untuk dihapus>
     sudah tidak ada.
+
+### 34. Front menu display
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:
+
+    jika kamu coba masuk kehalaman  : http://localhost:3000/admin/pages
+    coba pindahkan pisisi contoh blog pada bagian setelah home,
+    maka setelah kamu restart server (nodemon app.js), 
+    kamu akan liat susunan sesuai dengan yang td kita ubah,
+    pada halaman http://localhost:3000/admin/pages
