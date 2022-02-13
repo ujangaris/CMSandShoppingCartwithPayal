@@ -223,3 +223,11 @@
     jika berhasil data akan terimput dan yang di input tanpa gambar akan tampil gambar noimage secara otomatis
 
 ### 28. Get edit product
+
+### 29. Edit product view
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/products
+    coba klik button edit pada salah satu data, jika berhasil
+    akan diarahkan ke halaman edit product sesui dengan data yang di klik.
