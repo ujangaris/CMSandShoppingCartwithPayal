@@ -221,3 +221,5 @@
     pada browser: http://localhost:3000/admin/products/add-product
     pada form coba input form 2x , pertama dengan gambar yang kedua tidak dengan gambar
     jika berhasil data akan terimput dan yang di input tanpa gambar akan tampil gambar noimage secara otomatis
+
+### 28. Get edit product

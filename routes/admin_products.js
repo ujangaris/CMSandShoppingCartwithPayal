@@ -44,13 +44,12 @@ router.get('/add-product', function (req, res) {
  * POST add product
  */
 router.post('/add-product', function (req, res) {
-  if(!req.files){
-    imageFile = ''
+  if (!req.files) {
+    imageFile = '';
   }
-  if(req.files){
-
+  if (req.files) {
     var imageFile =
-    typeof req.files.image !== 'undefined' ? req.files.image.name : '';
+      typeof req.files.image !== 'undefined' ? req.files.image.name : '';
   }
 
   req.checkBody('title', 'Title must have a value.').notEmpty();
@@ -135,6 +134,45 @@ router.post('/add-product', function (req, res) {
       }
     });
   }
+});
+/*
+ * GET edit product
+ */
+router.get('/edit-product/:id', function (req, res) {
+  var errors;
+  if (req.session.errors) errors = req.session.errors;
+  req.session.errors = null;
+  Category.find(function (err, categories) {
+    Product.findById(req.params.id, function (err, p) {
+      if (err) {
+        console.log(err);
+        res.redirect('/admin/products');
+      } else {
+        var galleryDir = 'public/product_images/' + p._id + '/gallery';
+        var galleryImages = null;
+
+        fs.readdir(galleryDir, function (err, files) {
+          if (err) {
+            console.log(err);
+          } else {
+            galleryImages = files;
+
+            res.render('admin/edit_product', {
+              errors: p.errors,
+              title: p.title,
+              desc: p.desc,
+              categories: categories,
+              category: p.category.replace(/\s+/g, '-').toLowerCase(),
+              price: parseFloat(p.price).toFixed(2),
+              image: p.image,
+              galleryImages: galleryImages,
+              id: p.id,
+            });
+          }
+        });
+      }
+    });
+  });
 });
 
 // Exports
