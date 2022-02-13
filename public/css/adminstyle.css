@@ -5,3 +5,21 @@
 .ui-state-hightlight{
     border: 1px dashed #ccc;
 }
+img#imgPreview{
+    margin: 20px;
+}
+#noimage{
+    width: 100px;
+    height: 100px;
+}
+ul.gallery{
+    padding: 0;
+}
+ul.gallery li:first-child{
+    margin-left: 0;
+}
+ul.gallery li{
+    margin: 21px;
+    display: inline-block;
+    list-style: none;
+}

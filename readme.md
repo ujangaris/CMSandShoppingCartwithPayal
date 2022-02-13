@@ -270,3 +270,15 @@
     untuk lebih memastikan lihat pada pbuli/product_imag/<id+namagambar yang kita pilih>/gallery/thumbs akan ada file gambar yang td kita drop
 
     note: gambar hanya berhasil di simpan pada local direcory, tidak pada database!
+
+### 32. Delete gallery images
+   
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/products
+    coba klik button edit pada salah satu data, 
+    akan diarahkan ke halaman edit product sesui dengan data yang di klik.
+    coba klik button delete pada image gallery, jika berhasil gambar akan terhapus dari halaman.
+    untuk lebih memastikan lihat pada pbuli/product_imag/<id+namagambar yang kita pilih>/gallery/thumbs akan ada file gambar yang yang berkurang.
+
+    note: gambar hanya berhasil di simpan pada local direcory, tidak pada database!
