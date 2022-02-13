@@ -226,8 +226,22 @@
 
 ### 29. Edit product view
 
+    Menggunakan Dropzone untuk memasukan gambar/filde dengan mendragnya. 
+    Documentation: https://cdnjs.com/libraries/dropzone/5.1.1
+
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000/admin/products
     coba klik button edit pada salah satu data, jika berhasil
     akan diarahkan ke halaman edit product sesui dengan data yang di klik.
+
+### 30. Post edit product
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/products
+    coba klik button edit pada salah satu data, 
+    akan diarahkan ke halaman edit product sesui dengan data yang di klik.
+    kemudian coba edit data , bisa inputan atau gambar , jika berhasil data akan berubah.
+
+    pada tahap ini belum menggunakan funsi dari dropzone.

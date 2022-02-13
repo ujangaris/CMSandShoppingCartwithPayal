@@ -174,6 +174,77 @@ router.get('/edit-product/:id', function (req, res) {
     });
   });
 });
+/*
+ * POST edit product
+ */
+router.post('/edit-product/:id', function (req, res) {
+  if (!req.files) {
+    imageFile = '';
+  }
+  if (req.files) {
+    var imageFile =
+      typeof req.files.image !== 'undefined' ? req.files.image.name : '';
+  }
 
+  req.checkBody('title', 'Title must have a value.').notEmpty();
+  req.checkBody('desc', 'Description must have a value.').notEmpty();
+  req.checkBody('price', 'Price must have a value.').isDecimal();
+  req.checkBody('image', 'You must upload an image').isImage(imageFile);
+
+  var title = req.body.title;
+  var slug = title.replace(/\s+/g, '-').toLowerCase();
+  var desc = req.body.desc;
+  var price = req.body.price;
+  var category = req.body.category;
+  var pimage = req.body.pimage;
+  var id = req.params.id;
+  if (errors) {
+    req.session.errors = errors;
+    res.redirect('/admin/products/edit-product/' + id);
+  } else {
+    Product.findOne({ slug: slug, _id: { $ne: id } }, function (err, p) {
+      if (err) console.log(err);
+      if (p) {
+        req.flash('danger', 'Product title exists, choose another.');
+        res.redirect('/admin/products/edit-product/' + id);
+      } else {
+        Product.findById(id, function (err, p) {
+          if (err) console.log(err);
+          p.title = title;
+          p.slug = slug;
+          p.desc = desc;
+          p.price = parseFloat(price).toFixed(2);
+          p.category = category;
+          if (imageFile != '') {
+            p.image = imageFile;
+          }
+          p.save(function (err) {
+            if (err) console.log(err);
+            if (imageFile != '') {
+              if (pimage != '') {
+                fs.remove(
+                  'public/product_images/' + id + '/' + pimage,
+                  function (err) {
+                    if (err) console.log(err);
+                  }
+                );
+              }
+              var productImage = req.files.image;
+              var path = 'public/product_images/' + id + '/' + imageFile;
+
+              productImage.mv(path, function (err) {
+                return console.log(err);
+              });
+            }
+            req.flash('success', 'Product edited!');
+            res.redirect('/admin/products/edit-product/' + id);
+          });
+        });
+      }
+    });
+  }
+
+  var errors = req.validationErrors();
+});
 // Exports
 module.exports = router;
