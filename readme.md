@@ -358,6 +358,10 @@
     coba klik pada salah satu photo gallery, jika gambarnya mengambang dan bisa digeser, 
     berarti fancybox yang kita pasang berhasil.
 
+### 41. Cart route and header display
 
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000
 
 
