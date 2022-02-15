@@ -2,39 +2,47 @@ const express = require('express');
 const router = express.Router();
 
 // Get Page model
-var Page = require('../models/page');
+var Product = require('../models/product');
 
 /*
- * GET /
+ * GET add product to cart
  */
-router.get('/', function (req, res) {
-  Page.findOne({ slug: 'home' }, function (err, page) {
-    
+router.get('/add/:product', function (req, res) {
+  var slug = req.params.product;
+
+  Product.findOne({ slug: slug }, function (err, p) {
     if (err) console.log(err);
 
-      res.render('index', {
-        title: page.title,
-        content: page.content,
+    if (typeof req.session.cart == 'undefined') {
+      req.session.cart = [];
+      req.session.cart.push({
+        title: slug,
+        qty: 1,
+        price: parseFloat(p.price).toFixed(2),
+        image: '/product_images/' + p.id + '/' + p.image,
       });
-  });
-});
-/*
- * GET a page
- */
-router.get('/:slug', function (req, res) {
-  var slug = req.params.slug;
-
-  Page.findOne({ slug: slug }, function (err, page) {
-    if (err) console.log(err);
-
-    if (!page) {
-      res.redirect('/');
     } else {
-      res.render('index', {
-        title: page.title,
-        content: page.content,
-      });
+      var cart = req.session.cart;
+      var newItem = true;
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].title == slug) {
+          cart[i].qty++;
+          newItem = false;
+          break;
+        }
+      }
+      if (newItem) {
+        cart.push({
+          title: slug,
+          qty: 1,
+          price: parseFloat(p.price).toFixed(2),
+          image: '/product_images/' + p.id + '/' + p.image,
+        });
+      }
     }
+    console.log(req.session.cart);
+    req.flash('success', 'product added!');
+    res.redirect('back');
   });
 });
 

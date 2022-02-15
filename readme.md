@@ -363,5 +363,13 @@
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000
+    lihat pada navbar ada menu cart
 
+### 42. Add to cart
 
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/products
+    kemudian coba pilih salah satu product lalu klik add to cart,
+    dan perhatikan pada menu navbar cart akan bertambah nilainya jika di klik add to cart
+    perhatikan juga pada terminal !
