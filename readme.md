@@ -381,3 +381,12 @@
     pada browser: 
     http://localhost:3000/cart/checkout
     http://localhost:3000/admin/products
+
+### 44. Cart updating
+   
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/products
+    coba klik salah satu product, kemudian add product
+    kemudian coba klik tanda minus atau clear, jika berhasil kehapus productnya 
+    maka setup yang kita buat berhasil.
