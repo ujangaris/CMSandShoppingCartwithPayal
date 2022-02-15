@@ -40,11 +40,20 @@ router.get('/add/:product', function (req, res) {
         });
       }
     }
-    console.log(req.session.cart);
+    // console.log(req.session.cart);
     req.flash('success', 'product added!');
     res.redirect('back');
   });
 });
 
+/*
+ * GET checkout page
+ */
+router.get('/checkout', function (req, res) {
+  res.render('checkout', {
+    title: 'Checkout',
+    cart: req.session.cart,
+  });
+});
 // Exports
 module.exports = router;
