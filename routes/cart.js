@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const router = express.Router();
 
 // Get Page model
@@ -90,6 +91,16 @@ router.get('/update/:product', function (req, res) {
     }
   }
   req.flash('success', 'Cart update!');
+  res.redirect('/cart/checkout');
+});
+/*
+ * GET clear cart
+ */
+router.get('/clear', function (req, res) {
+  
+  delete req.session.cart
+
+  req.flash('success', 'Cart cleared!');
   res.redirect('/cart/checkout');
 });
 // Exports

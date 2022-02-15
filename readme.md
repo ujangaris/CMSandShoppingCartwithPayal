@@ -387,6 +387,15 @@
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000/products
-    coba klik salah satu product, kemudian add product
+    coba klik salah satu product, kemudian add product, klik menu My Cart
     kemudian coba klik tanda minus atau clear, jika berhasil kehapus productnya 
+    maka setup yang kita buat berhasil.
+
+### 45. Clear cart
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/products
+    coba klik salah satu product, kemudian add product, klik menu My Cart
+    kemudian coba klik clear cart, jika berhasil kehapus productnya 
     maka setup yang kita buat berhasil.
