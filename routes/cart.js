@@ -103,5 +103,14 @@ router.get('/clear', function (req, res) {
   req.flash('success', 'Cart cleared!');
   res.redirect('/cart/checkout');
 });
+/*
+ * GET buy now
+ */
+router.get('/buynow', function (req, res) {
+  
+  delete req.session.cart
+
+  res.sendStatus(200)
+});
 // Exports
 module.exports = router;

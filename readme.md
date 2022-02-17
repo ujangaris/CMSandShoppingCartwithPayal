@@ -404,9 +404,24 @@
 
     Documentation : https://www.paypal.com/ms/smarthelp/article/how-do-i-add-paypal-checkout-to-my-custom-shopping-cart-ts1200
 
-    pengujian pada browser, klil button paypal buy now,maka akan diarahkan kehalaman 
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/products
+    coba klik salah satu product, kemudian add product, klik menu My Cart
+    kemudian klik button paypal buy now,maka akan diarahkan kehalaman 
     form pembayaran dengan paypal.
 
     jika pada saat mengkil button paypal buy now terkunci,
     coba buka situs paypal, lalu login kemudian : https://www.paypal.com/businessmanage/preferences/payments
     pada encription payment rubah menjadi off/tidak
+
+### 47. Enhancing checkout
+     
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/products
+    coba klik salah satu product, kemudian add product, klik menu My Cart
+    kemudian klik button buy now,maka akan diarahkan kehalaman 
+    form pembayaran dengan paypal.
+
+    note : jika add 2 barang yang sama akan ada keterangan tambahan pada tampilan pembayaran paypal
