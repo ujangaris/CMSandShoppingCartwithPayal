@@ -430,3 +430,8 @@
 
     install package : npm install --save passport passport-local bcryptjs
 
+### 49. Register view
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/users/register
