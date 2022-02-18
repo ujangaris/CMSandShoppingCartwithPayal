@@ -425,3 +425,8 @@
     form pembayaran dengan paypal.
 
     note : jika add 2 barang yang sama akan ada keterangan tambahan pada tampilan pembayaran paypal
+
+### 48. User model and passport setup
+
+    install package : npm install --save passport passport-local bcryptjs
+

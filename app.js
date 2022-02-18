@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const expressValidator = require('express-validator');
 const fileUpload = require('express-fileupload');
+const passport = require('passport');
 
 // Connect to DB
 mongoose.connect(config.database);
@@ -47,12 +48,12 @@ var Category = require('./models/category');
 
 // Get all categories to pass to header.ejs
 Category.find(function (err, categories) {
-    if (err) {
-      console.log(err);
-    } else {
-      app.locals.categories = categories;
-    }
-  });
+  if (err) {
+    console.log(err);
+  } else {
+    app.locals.categories = categories;
+  }
+});
 
 //Express filelUpload middleware
 app.use(fileUpload());
@@ -117,10 +118,16 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('*', function(req, res, next){
-  res.locals.cart = req.session.cart
-  next()
-})
+// Passport Config
+require('./config/passport')(passport);
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.get('*', function (req, res, next) {
+  res.locals.cart = req.session.cart;
+  next();
+});
 
 // Set routes
 const pages = require('./routes/pages');
