@@ -475,3 +475,19 @@
     note :perhatikan pada navbar menu akan ada perbedaan jika sudah login dan belom login
     coba pula add product , jika belum login tidak akan ada button add product,
     sebaliknya jika sudah login button akan muncul.
+
+### 52. Logout 
+   
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/users/login
+    kemudian coba isi form login dengan user yang terdaftar;
+        username: john
+        password : admin0k8
+    jika berhasil ter-ridirect ke halamanan : http://localhost:3000 (home page)
+
+    kemudian coba logout, 
+
+    note: untuk user admin, pada halaman admin area akan ada menu logut
+    pada materi ini juga terdapat cara mengatasi error user is not undefined
+    jika pada halaman register mencoba register namun di kosongkan formnya 

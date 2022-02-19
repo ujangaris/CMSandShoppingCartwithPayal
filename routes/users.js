@@ -34,6 +34,7 @@ router.post('/register', function (req, res) {
   if (errors) {
     res.render('register', {
       errors: errors,
+      user: null, //untuk mengatasi error user is not defined sebelum login saat register formnya dikosongkan
       title: 'Register',
     });
   } else {
@@ -91,6 +92,14 @@ router.post('/login', function (req, res, next) {
     failureRedirect: '/users/login',
     failureFlash: true,
   })(req, res, next);
+});
+/*
+ * GET logout
+ */
+router.get('/logout', function (req, res) {
+  req.logout();
+  req.flash('success', 'You are logged out!');
+  res.redirect('/users/login');
 });
 
 // Exports

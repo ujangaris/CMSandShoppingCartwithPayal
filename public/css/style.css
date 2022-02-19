@@ -47,3 +47,10 @@ table.alignmiddle td{
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
+ /* untuk menghidupkan alert pada halaman login */ 
+.alert-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
