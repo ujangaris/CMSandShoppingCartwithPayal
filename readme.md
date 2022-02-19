@@ -457,3 +457,21 @@
     pada browser: http://localhost:3000/users/login
     kemudian coba isi form login jika berhasil
     ter-ridirect ke halamanan : http://localhost:3000 (home page)
+
+### 51. Authentication 
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/users/register
+    kemudian coba isi form register
+        name: john 
+        email:john@mail.com
+        username: john
+        password: admin0k8
+        confirm password: admin0k8
+    jika berhasil ter-ridirect ke halamanan : http://localhost:3000/users/login
+    kemudian login dengan user diatas.
+
+    note :perhatikan pada navbar menu akan ada perbedaan jika sudah login dan belom login
+    coba pula add product , jika belum login tidak akan ada button add product,
+    sebaliknya jika sudah login button akan muncul.
