@@ -500,3 +500,5 @@
     jika belum login sebagai admin akan ada notifikasi alert.
 
     note: halaman admin hanya bisa diaccess oleh admin, jika user biasa akan di redirect ke halaman user.
+
+### 54. Adding more text and headings to pages 
