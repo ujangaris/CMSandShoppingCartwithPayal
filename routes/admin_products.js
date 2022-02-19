@@ -3,6 +3,8 @@ const router = express.Router();
 const mkdirp = require('mkdirp');
 const fs = require('fs-extra');
 const resizeImg = require('resize-img');
+const auth = require('../config/auth');
+const isAdmin = auth.isAdmin;
 
 // Get Product model
 var Product = require('../models/product');
@@ -12,7 +14,7 @@ var Category = require('../models/category');
 /*
  * GET products index
  */
-router.get('/', function (req, res) {
+router.get('/', isAdmin, function (req, res) {
   var count;
   Product.count(function (err, c) {
     count = c;
@@ -27,7 +29,7 @@ router.get('/', function (req, res) {
 /*
  * GET add product
  */
-router.get('/add-product', function (req, res) {
+router.get('/add-product', isAdmin, function (req, res) {
   let title = '';
   let desc = '';
   let price = '';
@@ -138,7 +140,7 @@ router.post('/add-product', function (req, res) {
 /*
  * GET edit product
  */
-router.get('/edit-product/:id', function (req, res) {
+router.get('/edit-product/:id', isAdmin, function (req, res) {
   var errors;
   if (req.session.errors) errors = req.session.errors;
   req.session.errors = null;
@@ -270,7 +272,7 @@ router.post('/product-gallery/:id', function (req, res) {
 /*
  * DELETE image gallery
  */
-router.get('/delete-image/:image', function (req, res) {
+router.get('/delete-image/:image', isAdmin, function (req, res) {
   var originalImage =
     'public/product_images/' + req.query.id + '/gallery/' + req.params.image;
   var thumbImage =
@@ -297,21 +299,21 @@ router.get('/delete-image/:image', function (req, res) {
 /*
  * DELETE product
  */
-router.get('/delete-product/:id', function (req, res) {
-  var id = req.params.id
-  var path = 'public/product_images/' + id
+router.get('/delete-product/:id', isAdmin, function (req, res) {
+  var id = req.params.id;
+  var path = 'public/product_images/' + id;
 
-  fs.remove(path, function(err){
-    if(err){
+  fs.remove(path, function (err) {
+    if (err) {
       console.log(err);
-    }else{
-      Product.findByIdAndRemove(id, function(err){
+    } else {
+      Product.findByIdAndRemove(id, function (err) {
         console.log(err);
-      })
+      });
       req.flash('success', 'Product deleted!');
       res.redirect('/admin/products');
     }
-  })
+  });
 });
 
 // Exports

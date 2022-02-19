@@ -491,3 +491,12 @@
     note: untuk user admin, pada halaman admin area akan ada menu logut
     pada materi ini juga terdapat cara mengatasi error user is not undefined
     jika pada halaman register mencoba register namun di kosongkan formnya 
+
+### 53. Access control 
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/admin/pages
+    jika belum login sebagai admin akan ada notifikasi alert.
+
+    note: halaman admin hanya bisa diaccess oleh admin, jika user biasa akan di redirect ke halaman user.

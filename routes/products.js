@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs-extra');
+const auth = require('../config/auth');
+const isUser = auth.isUser;
 
 // Get Product model
 var Product = require('../models/product');
@@ -12,6 +14,7 @@ const { fstat } = require('fs-extra');
  * GET all products
  */
 router.get('/', function (req, res) {
+  // router.get('/',isUser, function (req, res) {
   Product.find(function (err, products) {
     if (err) console.log(err);
 
