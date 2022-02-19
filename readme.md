@@ -435,3 +435,17 @@
     untuk mengetahui semua berjalan dengan baik lakukan restart server
     restart server : nodemon app.js
     pada browser: http://localhost:3000/users/register
+
+### 50. Register post
+
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/users/register
+    kemudian coba isi form register jika berhasil
+    ter-ridirect ke halamanan : http://localhost:3000/users/login
+
+    note: agar flash alert yang kita pasang dapat kita lihat jika user salah melakukan register,
+    kosongkan semua isian form kemudian klik buttom submit,
+    maka flash alert akan muncul, lakukan juga pada isian form seperti :
+    - tidak samanya password dan confirm password 
+    - kosongnya name/email/username/password
