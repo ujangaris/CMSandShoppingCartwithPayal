@@ -449,3 +449,11 @@
     maka flash alert akan muncul, lakukan juga pada isian form seperti :
     - tidak samanya password dan confirm password 
     - kosongnya name/email/username/password
+
+### 51. Login
+    
+    untuk mengetahui semua berjalan dengan baik lakukan restart server
+    restart server : nodemon app.js
+    pada browser: http://localhost:3000/users/login
+    kemudian coba isi form login jika berhasil
+    ter-ridirect ke halamanan : http://localhost:3000 (home page)
